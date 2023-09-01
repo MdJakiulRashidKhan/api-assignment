@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="container mx-auto">
+   <main>
+    <section>
+    <h1 class="text-3xl py-4">Discuss the scope of var, let, and const?</h1> 
+   <p>The scope of variables in JavaScript is determined by the type of variable declaration: var, let, and const. Each of these keywords has a different scope behavior, affecting how variables are accessed and manipulated within different parts of your code.</p>
+   <p class="mt-2">
+    <span class="font-black"> var:</span>
+    Variables declared with var have function scope or global scope.
+    If a var variable is declared inside a function, it's accessible within that function, including nested blocks.
+    If a var variable is declared outside any function, it becomes a global variable and is accessible throughout the entire code.
+    var variables are hoisted to the top of their scope, meaning they are moved to the top of the function or global context during compilation.
+    Due to hoisting and its less strict scoping rules, using var can lead to unexpected behavior and bugs in your code.
+  </p>
+  <p class="mt-2">
+    <span class="font-black"> let:</span>
+
+    Variables declared with let have block scope.
+    A block scope can be a function, a loop, or any code block enclosed in curly braces {}.
+    let variables are not hoisted in the same way as var variables. They are hoisted but not initialized, which means they are not accessible before the point where they are declared in the code.
+    Re-declaring a variable with let within the same scope is not allowed.
+  </p>
+  <p class="mt-2">
+    <span class="font-black"> const:</span>
+
+    Variables declared with const also have block scope.
+    Like let, const variables are not hoisted in the same way as var variables.
+    const variables are used for values that are not meant to be re-assigned after their initial assignment.
+    When using const with objects and arrays, the variable itself is not re-assignable, but the properties or elements of the object or array can still be modified.
+    Re-declaring or re-assigning a const variable is not allowed.
+  </p>
+    </section>
+    <hr class="my-4">
+    <section>
+        <h1 class="text-3xl py-4">Tell us the use cases of null and undefined</h1>
+        <p>
+            Both null and undefined are special values in JavaScript that represent the absence or lack of a meaningful value. While they are often used interchangeably to indicate missing values, they have slightly different use cases.
+        </p>
+        <p class="font-black text-xl">undefined:</p>
+        <p class="mt-2">
+            <span class="font-black"> Variable Declaration:</span> When a variable is declared but not initialized with a value, it has an initial value of undefined.
+        </p>
+        <p class="mt-2">
+            <span class="font-black"> Missing Property:</span> When trying to access an object property that doesn't exist, the result is undefined.
+        </p>
+        <p class="mt-2">
+            <span class="font-black">Function Arguments:</span> If a function parameter is not provided with a value, it defaults to undefined.
+        </p>
+        <p class="mt-2">
+            <span class="font-black">Return Value:</span> If a function doesn't explicitly return a value, it implicitly returns undefined.
+        </p>
+        <p class="mt-2">
+           <span class="font-black"> Falsy Value:</span> In boolean contexts, undefined is considered falsy.
+        </p>
+        <p class="font-black text-xl mb-2">null:</p>
+        <p class="mt-2">
+            <span class="font-black"> Intentional Absence:</span> null is often used to explicitly indicate that a variable or object property intentionally has no value or is empty.
+        </p>
+        <p class="mt-2">
+            <span class="font-black">Variable Initialization:</span> Unlike undefined, null is used to explicitly assign a value to indicate an empty state or lack of a value.
+        </p>
+        <p class="mt-2">
+            <span class="font-black"> Function Return:</span> A function can explicitly return null to indicate that it didn't produce a valid result.
+        </p>
+        <p class="mt-2">
+            <span class="font-black"> Comparison for Absence:</span> When checking for the absence of a value, you might use null as a specific marker for missing data.
+        </p>
+        <p class="mt-2">
+            In summary, you might choose to use undefined when a value is truly absent due to the variable or property not being defined or not having an initial value. On the other hand, you might use null when you want to explicitly set a value to indicate the absence of data or a specific condition where the value is intentionally empty. It's important to use them consistently and appropriately to maintain code clarity and avoid unexpected behavior.
+        </p>
+    </section>
+    <hr class="my-4">
+    <section>
+        <h1 class="text-3xl py-4">What do you mean by REST API?</h1>
+        <p>
+            REST API, or Representational State Transfer Application Programming Interface, is a set of guidelines and principles for building and interacting with web services. It is a widely used architectural style for designing networked applications, especially those that involve client-server communication over the internet.
+
+            Here are some key characteristics and concepts of REST APIs:
+        </p>
+        <p class="mt-2">
+            <span class="font-black"> Resources:</span> In a REST API, everything is treated as a resource, which can be represented by a URL (Uniform Resource Locator). Resources are entities that the client wants to interact with, such as users, products, articles, etc.
+        </p>
+        <p class="mt-2">
+            <span class="font-black">HTTP Methods:</span> REST APIs use the standard HTTP methods to perform different actions on resources:
+            <p>
+                <span class="font-black"> GET:</span> Retrieve data from a resource.
+            </p>
+            <p>
+                <span class="font-black"> POST:</span> Create a new resource.
+            </p>
+            <p>
+                <span class="font-black">PUT:</span> Update an existing resource or create a new one if it doesn't exist.
+            </p>
+            <p>
+                <span class="font-black"> DELETE:</span> Remove a resource.
+            </p>
+            <p>
+                <span class="font-black inline-block"> PATCH: </span>Partially update a resource.
+            </p>     
+        </p>
+        <p class="mt-2">
+            <span class="font-black"> Stateless:</span> REST APIs are stateless, meaning that each request from a client to the server must contain all the information needed to understand and process the request. The server doesn't store any client context between requests. 
+        </p>
+        <p class="mt-2">
+            <span class="font-black"> Uniform Interface:</span> REST APIs have a uniform interface, which means that the way clients interact with resources is consistent and standardized. Resources are identified by URLs, and the operations on resources are performed using HTTP methods.
+        </p>
+        <p  class="mt-2">
+            <span class="font-black"> Representation:</span> Resources can have multiple representations, such as JSON, XML, HTML, or others. The client can specify the desired representation using the Accept header in the request.
+        </p>
+        <p  class="mt-2">
+            <span class="font-black">HATEOAS (Hypermedia as the Engine of Application State): </span>This principle encourages including hyperlinks in API responses that guide clients on how to navigate to related resources. This makes APIs more self-descriptive and helps clients discover available actions.
+        </p>
+        <p  class="mt-2">
+            <span class="font-black"> Caching:</span> REST APIs can take advantage of HTTP caching mechanisms to improve performance and reduce the need for repeated requests.
+        </p>
+        <p  class="mt-2">
+            <span class="font-black"> Security:</span> REST APIs can use standard HTTP security mechanisms, such as HTTPS, authentication, and authorization, to secure the communication between clients and servers.
+        </p>
+        <p class="mt-2">
+            <span class="font-black"> Scalability:</span> REST APIs are designed to be scalable and can handle a large number of clients and requests.
+        </p>
+        <p class="mt-4">
+            Overall, REST APIs provide a standardized way for different applications and systems to communicate with each other over the web. They are widely used for building web services, mobile applications, and other distributed systems.
+        </p>
+    </section>
+   </main>
+
+   <section>
+    <div class="flex justify-end me-10 my-6">
+        <button class="btn btn-ghost bg-red-600 text-white block" id="btnBack"><img src="images/Logo.png" alt=""> </button>
+    </div>
+    
+   </section>
+   <script src="js/back.js"></script>
+</body>
+</html>
