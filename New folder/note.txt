@@ -1,1 +1,1 @@
-https://app.netlify.com/sites/regal-tapioca-2e169a/deploys/64f1b0d6c1b6bb4b1bb99aa6
+https://64f1b0d6c1b6bb4b1bb99aa6--regal-tapioca-2e169a.netlify.app/
